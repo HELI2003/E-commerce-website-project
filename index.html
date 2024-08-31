@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionFold</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FashionFold</h1>
+        </header>
+        
+        <div id="filters">
+            <button class="filter">All</button>
+            <button class="filter">Handbags</button>
+            <button class="filter">Totes</button>
+            <button class="filter">Clutches</button>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <img src="bag1.jpg" alt="Handbag">
+                <h2>Stylish Handbag</h2>
+                <p>₹1,999</p>
+                <button class="button" data-name="Stylish Handbag" data-price="1999">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="bag2.jpg" alt="Tote Bag">
+                <h2>Elegant Tote Bag</h2>
+                <p>₹2,499</p>
+                <button class="button" data-name="Elegant Tote Bag" data-price="2499">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="bag3.jpg" alt="Clutch">
+                <h2>Chic Clutch</h2>
+                <p>₹1,499</p>
+                <button class="button" data-name="Chic Clutch" data-price="1499">Add to Cart</button>
+            </div>
+            <!-- New Products -->
+            <div class="product">
+                <img src="bag4.jpg" alt="Handbag">
+                <h2>Classic Handbag</h2>
+                <p>₹2,299</p>
+                <button class="button" data-name="Classic Handbag" data-price="2299">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="bag5.jpg" alt="Tote Bag">
+                <h2>Modern Tote Bag</h2>
+                <p>₹2,799</p>
+                <button class="button" data-name="Modern Tote Bag" data-price="2799">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="bag6.jpg" alt="Clutch">
+                <h2>Luxury Clutch</h2>
+                <p>₹1,799</p>
+                <button class="button" data-name="Luxury Clutch" data-price="1799">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cart-total">0</span></h3>
+            </div>
+            <div class="checkout">
+                <button id="checkout-btn" class="button">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="toast" class="toast">Item successfully added to the cart!</div>
+
+        <!-- Modal for Checkout -->
+        <div id="checkout-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Checkout</h2>
+                <form id="checkout-form">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="address" placeholder="Address" required>
+                    <input type="text" id="card-number" placeholder="Card Number" required>
+                    <input type="text" id="expiry-date" placeholder="Expiry Date (MM/YY)" required>
+                    <input type="text" id="cvv" placeholder="CVV" required>
+                    <button type="submit" class="button">Submit Payment</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
